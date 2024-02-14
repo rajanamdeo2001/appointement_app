@@ -1,24 +1,17 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## About Application
+Hospital apppoitment application made with Ruby and bootstrap on rails, have functionality to register new doctors (based on their speciality), patient (with contact & age) and Book appointments.
 
-Things you may want to cover:
+## Application snaps
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### 1.
+![](app/assets/images/1.png)
+### 2.
+![](app/assets/images/2.png)
+### 3.
+![](app/assets/images/3.png)
+### 4.
+![](app/assets/images/4.png)
+### 5.
+![](app/assets/images/5.png) 
