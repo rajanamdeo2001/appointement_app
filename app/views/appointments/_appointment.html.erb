@@ -1,0 +1,19 @@
+<div id="<%= dom_id appointment %>">
+  <p style="position:center;">
+    <strong>Appointment No:</strong>
+    <%= appointment.id %>
+    <br> 
+    <strong>Doctor id/name/speciality:</strong>
+    <%= appointment.doctor_id %>/<%= appointment.doctor.name %>/<%= appointment.doctor.speciality%>
+    <br>
+    <strong>Patient id/name/age:</strong>
+    <%= appointment.patient_id %>/<%= appointment.patient.name %>/<%= appointment.patient.age %>
+    <br>
+    <strong>Patient email:</strong>
+    <%= appointment.patient.email %>
+    <br>
+    <strong>Appointment datetime:</strong>
+    <%= appointment.appointment_datetime %>
+  </p>
+
+</div>

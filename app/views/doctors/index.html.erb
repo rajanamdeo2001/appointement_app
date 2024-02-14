@@ -1,0 +1,43 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Available Doctors</h1>
+
+<br>
+<div style="margin:0% 10%;">
+  <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Doctor name</th>
+      <th scope="col">Doctor speciality</th>
+      <th scope="col">More details</th>
+    </tr>
+  </thead>
+  <tbody class="table-group-divider">
+    <% @doctors.each do |doctor| %>
+      <tr>
+        <th scope="row"><%= doctor.id %></th>
+        <td><%= doctor.name %></td>
+        <td><%= doctor.speciality %></td>
+        <td><%= link_to "Show details", doctor %></td>
+      </tr>
+    <% end %>
+  </tbody>
+  </table>
+</div>
+
+
+<%
+=begin%>
+ <div id="doctors">
+  <% @doctors.each do |doctor| %>
+    <%= render doctor %>
+    <p>
+      <%= link_to "Show this doctor", doctor %>
+    </p>
+  <% end %>
+</div> 
+<%
+=end%>
+
+<%= link_to "Register new doctor", new_doctor_path, class: "btn btn-dark" %>

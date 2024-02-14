@@ -1,0 +1,36 @@
+<h1>Hospital appointment application</h1>
+<p>Book your appointments in simplified way</p>
+
+<br>
+
+<div style="margin:0% 10%">
+<div class="row row-cols-1 row-cols-md-3 g-4">
+  <div class="col">
+    <div class="card">
+      <%= image_tag "appointment.png", class: "card-img-top", width: "25%", height: "25%", margin: "15%" %>
+      <div class="card-body">
+        <br>
+        <%= link_to "Appointments", appointments_path, class: "btn btn-dark" %>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card">
+      <%= image_tag "doctor.webp", class: "card-img-top", width: "25%", height: "25%" %>
+      <div class="card-body">
+        <br>
+        <%= link_to "Know your doctor", doctors_path, class: "btn btn-dark" %>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card">
+      <%= image_tag "patient.webp", class: "card-img-top", width: "25%", height: "25%" %>
+      <div class="card-body">
+        <br>
+        <%= link_to "See patients list", patients_path, class: "btn btn-dark" %>
+      </div>
+    </div>
+  </div>
+</div>
+</div>

@@ -1,0 +1,11 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @patient %>
+
+<div>
+  <br>
+  <%= link_to "Edit this patient", edit_patient_path(@patient), class:"btn btn-dark" %>
+  <br><br>
+  <%= button_to "Destroy this patient", @patient, method: :delete, class: "btn btn-secondary;" %>
+  <%= link_to "Back to patients", patients_path, class: "btn btn-secondary;" %>
+</div>

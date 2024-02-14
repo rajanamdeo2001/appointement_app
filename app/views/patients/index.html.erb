@@ -1,0 +1,43 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Patients List</h1>
+<br>
+<div style="margin:0% 10%;">
+  <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Patient name</th>
+      <th scope="col">Patient age</th>
+      <th scope="col">Patient email</th>
+      <th scope="col">More details</th>
+    </tr>
+  </thead>
+  <tbody class="table-group-divider">
+    <% @patients.each do |patient| %>
+      <tr>
+        <th scope="row"><%= patient.id %></th>
+        <td><%= patient.name %></td>
+        <td><%= patient.age %></td>
+        <td><%= patient.email %></td>
+        <td><%= link_to "Show details", patient %></td>
+      </tr>
+    <% end %>
+  </tbody>
+  </table>
+</div>
+
+<%
+=begin%>
+ <div id="patients">
+  <% @patients.each do |patient| %>
+    <%= render patient %>
+    <p>
+      <%= link_to "Show this patient", patient %>
+    </p>
+  <% end %>
+</div> 
+<%
+=end%>
+
+<%= link_to "New patient", new_patient_path, class: "btn btn-dark" %>

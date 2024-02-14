@@ -1,0 +1,43 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Appointments</h1>
+<br>
+<div style="margin:0% 10%;">
+  <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Patient name</th>
+      <th scope="col">Doctor name</th>
+      <th scope="col">Date/Time</th>
+      <th scope="col">More details</th>
+    </tr>
+  </thead>
+  <tbody class="table-group-divider">
+    <% @appointments.each do |appointment| %>
+      <tr>
+        <th scope="row"><%= appointment.id %></th>
+        <td><%= appointment.patient.name %></td>
+        <td><%= appointment.doctor.name %></td>
+        <td><%= appointment.appointment_datetime %></td>
+        <td><%= link_to "Show details", appointment %></td>
+      </tr>
+    <% end %>
+  </tbody>
+  </table>
+</div>
+
+<%
+=begin%>
+ <div id="appointments">
+  <% @appointments.each do |appointment| %>
+    <%= render appointment %>
+    <p>
+      <%= link_to "Show this appointment", appointment %>
+    </p>
+  <% end %>
+</div> 
+<%
+=end%>
+
+<%= link_to "Book new appointment", new_appointment_path, class: "btn btn-dark" %>
